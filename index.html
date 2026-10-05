@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Thompsons For Travel - Enquiry Form Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0A52A0;--navy-deep:#073963;--cyan:#00AEEF;--cyan-soft:#E4F6FE;--ink:#1B2430;--paper:#FFFFFF;--off-white:#F7FAFC;--slate:#5B6B7C;--slate-bg:#E9EDF1;--border:#DDE8F0;--green:#17794A;--green-bg:#E1F3E9;--red:#A9291F;--red-bg:#FBE9E7;--amber:#B5720A;--amber-bg:#FBF1E1;--orange:#F7941D}
+  *{box-sizing:border-box}
+  body{font-family:'Open Sans',Arial,sans-serif;color:var(--ink);background:var(--off-white);margin:0;padding:0 0 80px;font-size:14px;line-height:1.65}
+  .head-wrap{background:linear-gradient(180deg,#F5FBFF 0%,#FFFFFF 100%);border-bottom:1px solid var(--border)}
+  .head-inner{max-width:1040px;margin:0 auto;padding:30px 24px 10px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .logo{height:46px;width:auto;display:block}
+  .head-titles{flex:1;min-width:260px}
+  .head-titles h1{font-family:'Nunito',sans-serif;color:var(--navy);font-size:26px;margin:0 0 2px;font-weight:900}
+  .head-titles p{color:var(--slate);font-size:13.5px;margin:0}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+  .wave{display:block;width:100%;height:30px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .print-btn{position:fixed;top:18px;right:18px;background:var(--navy);color:#fff;border:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:12.5px;padding:9px 18px;border-radius:999px;cursor:pointer;z-index:10}
+  .toc-bar{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 26px}
+  .toc-bar a{background:var(--paper);border:1.5px solid var(--border);color:var(--navy);font-size:11.5px;font-weight:700;padding:7px 14px;border-radius:999px;text-decoration:none}
+  .toc-bar a:hover{border-color:var(--cyan);background:var(--cyan-soft)}
+  section.block{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:28px 30px;margin-bottom:22px;box-shadow:0 1px 3px rgba(10,82,160,.05),0 8px 20px rgba(10,82,160,.04);scroll-margin-top:20px}
+  h2.section-title{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;color:var(--navy);margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  h2.section-title .num{background:var(--navy);color:#fff;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+  .section-sub{font-size:12.5px;color:var(--slate);margin:0 0 20px 36px}
+  h3.sub-title{font-family:'Nunito',sans-serif;font-size:14.5px;font-weight:800;color:var(--navy-deep);margin:22px 0 10px}
+  p{margin:0 0 10px} ul{margin:0 0 14px 20px} li{margin-bottom:5px}
+  .rule{background:var(--cyan-soft);border:1px solid #B9E7F8;border-radius:8px;padding:12px 16px;font-size:12.5px;color:var(--navy-deep);margin-bottom:14px}
+  .rule b{color:var(--navy)}
+  .warn{background:var(--amber-bg);border:1px solid #E9C98A;border-radius:8px;padding:12px 16px;font-size:12.5px;color:var(--amber);margin-bottom:14px}
+  .warn b{color:var(--navy)}
+  .pill-tag{display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--slate-bg);color:var(--slate);white-space:nowrap}
+  .pill-tag.new{background:var(--green-bg);color:var(--green)}
+  .pill-tag.change{background:var(--cyan-soft);color:var(--navy)}
+  .pill-tag.confirm{background:var(--amber-bg);color:var(--amber)}
+  .pill-tag.hidden{background:#EEE8F7;color:#5A3E8C}
+  table.spec{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0 18px}
+  table.spec th,table.spec td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+  table.spec th{color:var(--slate);font-family:'Space Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+  .tbl-wrap{overflow-x:auto}
+  .comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:14px 0 18px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(10,82,160,.06),0 8px 20px rgba(10,82,160,.05)}
+  .card h4{font-family:'Nunito',sans-serif;font-size:14px;color:var(--navy);margin:0 0 6px}
+  .card p{font-size:12.5px;color:var(--slate);margin:0 0 6px}
+  .card .mini{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--cyan);margin-bottom:6px}
+
+  /* ---------- form mockup ---------- */
+  .stage{display:grid;grid-template-columns:1fr 330px;gap:26px;align-items:start}
+  .frame-label{font-family:'Space Mono',monospace;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin:0 0 8px}
+  .desk{background:#fff;border:1px solid #E3E6EA;border-radius:12px;padding:20px}
+  .phone{border:10px solid #1B2430;border-radius:34px;background:#fff;padding:18px 14px 22px;max-width:330px;box-shadow:0 10px 30px rgba(10,82,160,.12)}
+  .phone .notch{width:90px;height:6px;background:#1B2430;border-radius:999px;margin:-8px auto 14px}
+  .f{font-family:'Nunito',sans-serif}
+  .f .ref{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;color:#555;margin-bottom:12px}
+  .f .grp{font-size:10.5px;font-weight:800;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase;margin:16px 0 8px;padding-bottom:4px;border-bottom:1.5px solid var(--cyan-soft)}
+  .f .grp:first-of-type{margin-top:4px}
+  .f label{display:block;font-size:11.5px;font-weight:800;color:#666;text-transform:uppercase;margin:0 0 4px}
+  .f label .req{color:#E0201B}
+  .f input,.f select,.f textarea{width:100%;font-family:'Open Sans',sans-serif;font-size:14px;padding:10px 11px;border:1px solid #CFD6DD;border-radius:6px;background:#fff;color:var(--ink);min-height:44px}
+  .f textarea{min-height:64px;resize:vertical}
+  .f select.empty{color:#8A96A3}
+  .f .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+  .f .row.one{grid-template-columns:1fr}
+  .f .row.code{grid-template-columns:120px 1fr}
+  .f .field{margin-bottom:10px}
+  .f .row>div{min-width:0}.f input[type=date]{min-width:0;padding:10px 6px;font-size:13px}
+  .f .hint{font-family:'Open Sans',sans-serif;font-size:11px;color:var(--slate);margin-top:3px;text-transform:none;font-weight:400}
+  .f .check{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;font-weight:700;color:var(--ink);margin:8px 0;text-transform:none;font-family:'Open Sans',sans-serif;cursor:pointer}
+  .f .check input{width:18px;height:18px;min-height:0;margin:1px 0 0;flex-shrink:0;accent-color:var(--cyan)}
+  .f .check small{display:block;font-weight:400;color:var(--slate);font-size:11px}
+  .f .seg{display:flex;border:1px solid #CFD6DD;border-radius:999px;overflow:hidden}
+  .f .seg button{flex:1;border:0;background:#fff;padding:10px 6px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:#666;cursor:pointer;min-height:44px}
+  .f .seg button.on{background:var(--cyan);color:#fff}
+  .f .ages{background:var(--cyan-soft);border-radius:10px;padding:12px;margin:0 0 10px;display:none}
+  .f .ages.show{display:block}
+  .f .ages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+  .f .ages .lbl{font-size:11px;font-weight:800;color:var(--navy);text-transform:uppercase;margin-bottom:6px}
+  .f .send{background:var(--orange);color:#fff;border:0;border-radius:6px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;padding:12px 26px;margin-top:10px;cursor:pointer;min-height:46px}
+  .phone .f .send{width:100%}
+  .phone .f .row{grid-template-columns:1fr}
+  .phone .f .row.code{grid-template-columns:100px 1fr}
+  .phone .f .row.keep2{grid-template-columns:1fr 1fr}
+  .f .privacy{font-family:'Open Sans',sans-serif;font-size:10.5px;color:var(--slate);margin-top:10px}
+  .anno{position:relative}
+  .tagdot{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Nunito',sans-serif;font-size:10px;font-weight:900;margin-left:6px;vertical-align:middle}
+  .notes-list{list-style:none;margin:0;padding:0}
+  .notes-list li{display:flex;gap:10px;font-size:12.5px;padding:8px 0;border-bottom:1px solid var(--border)}
+  .notes-list li:last-child{border-bottom:0}
+  .notes-list .tagdot{margin:2px 0 0;flex-shrink:0}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .compare .col{border-radius:12px;padding:16px 18px}
+  .compare .before{background:var(--slate-bg)}
+  .compare .after{background:var(--cyan-soft)}
+  .compare h4{font-family:'Nunito',sans-serif;margin:0 0 8px;font-size:14px;color:var(--navy-deep)}
+  .compare ul{font-size:12.5px;margin-left:18px}
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:12px 0 18px}
+  .flow .node{flex:1;min-width:150px;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:12px 14px;font-size:12px}
+  .flow .node b{display:block;font-family:'Nunito',sans-serif;color:var(--navy);font-size:13px;margin-bottom:3px}
+  .flow .arrow{display:flex;align-items:center;color:var(--cyan);font-weight:900;font-size:18px}
+  .flow .node.hl{border-color:var(--cyan);background:var(--cyan-soft)}
+  .list-card{border-left:4px solid var(--navy)}
+  .list-card.alt{border-left-color:var(--cyan)}
+  .check-list{list-style:none;margin:0;padding:0}
+  .check-list li{padding:9px 0 9px 30px;border-bottom:1px solid var(--border);position:relative;font-size:13px}
+  .check-list li:before{content:"\2713";position:absolute;left:0;top:8px;width:20px;height:20px;border-radius:50%;background:var(--cyan-soft);color:var(--navy);font-family:'Nunito',sans-serif;font-weight:900;font-size:11px;display:flex;align-items:center;justify-content:center}
+  footer{max-width:1040px;margin:30px auto 0;padding:0 24px;font-size:11.5px;color:var(--slate)}
+  @media (max-width:860px){.stage{grid-template-columns:1fr}.phone{margin:0 auto}}
+  @media (max-width:620px){
+    .head-inner{padding:24px 16px 6px}.wrap{padding:0 16px}
+    section.block{padding:22px 18px}.section-sub{margin-left:0}
+    .compare{grid-template-columns:1fr}.flow .arrow{display:none}
+    .desk .f .row{grid-template-columns:1fr}.desk .f .row.code{grid-template-columns:100px 1fr}
+    .print-btn{position:static;margin:12px 16px 0}
+    .head-titles h1{font-size:22px}
+  }
+  @media print{.print-btn,.toc-bar{display:none}body{background:#fff}section.block{box-shadow:none;break-inside:avoid;page-break-inside:avoid}.ages{display:block}}
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="head-wrap">
+  <div class="head-inner">
+    <img class="logo" alt="Thompsons For Travel" src="data:image/png;base64,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">
+    <div class="head-titles">
+      <div class="eyebrow">Brief for Kim &middot; Website enquiry form</div>
+      <h1>Enquiry Form Brief</h1>
+      <p>The field changes, layout and newsletter split for the package enquiry form, ready to pass to Synapse. A first step in building clean lists and data in Fresh.</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 940 30" preserveAspectRatio="none"><path d="M0,16 C120,30 220,2 360,14 C500,26 600,4 760,12 C860,18 900,9 940,16" fill="none" stroke="#00AEEF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/></svg>
+</div>
+
+<div class="wrap">
+  <div class="toc-bar">
+    <a href="#summary">At a glance</a>
+    <a href="#design">The new form</a>
+    <a href="#fields">Field by field</a>
+    <a href="#children">Children's ages</a>
+    <a href="#departure">Departure point</a>
+    <a href="#naming">Enquiry names</a>
+    <a href="#newsletter">Newsletter split</a>
+    <a href="#lists">Lists in Fresh</a>
+    <a href="#fresh">Fields for Fresh</a>
+    <a href="#thursday">For Thursday</a>
+  </div>
+
+  <!-- 1 -->
+  <section class="block" id="summary">
+    <h2 class="section-title"><span class="num">1</span>At a glance</h2>
+    <p class="section-sub">What we're changing and why, in one view.</p>
+    <div class="rule">The form works today, so this is a tidy-up, not a rebuild. The aim is that every enquiry arrives in Fresh with clean, usable details, so the team spends less time asking the customer things they already told us, and we can start building our marketing lists properly. The form stays custom built, and the Zapier connection carries the data through.</div>
+    <div class="compare">
+      <div class="col before">
+        <h4>Today</h4>
+        <ul>
+          <li>Children's ages typed into one small free-text box</li>
+          <li>Departure point already shows "Self-Drive", so it's easy to send without choosing</li>
+          <li>Departure options limited to Johannesburg, Cape Town, Durban, Self-Drive and Other</li>
+          <li>One "Sign up for more travel deals" tick that isn't a real subscription in Fresh</li>
+          <li>Fields sit in a three-across grid that gets cramped on a phone</li>
+          <li>Package page link not reaching Fresh</li>
+        </ul>
+      </div>
+      <div class="col after">
+        <h4>Proposed</h4>
+        <ul>
+          <li>Pick the number of children, and an age box opens for each child</li>
+          <li>Departure point starts blank and must be chosen</li>
+          <li>Added: Port Elizabeth (Gqeberha), East London, Bloemfontein</li>
+          <li>Newsletter tick creates a separate marketing subscription, with the interest picked up from the page</li>
+          <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 themes, two lists only</li>
+          <li>Anchor link to the sign-up for Tommy and the team</li>
+          <li>Grouped sections, one column on mobile, bigger tap areas</li>
+          <li>Hidden fields carry the page link, reference, property name and destination</li>
+          <li>A clickable Package Link on every enquiry, so consultants see the full package in one click</li>
+          <li>Every enquiry named the same simple way: Hotel or Destination - Surname</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="design">
+    <h2 class="section-title"><span class="num">2</span>The new form</h2>
+    <p class="section-sub">A working visual rather than a wireframe. Try the Children box to see the ages open up.</p>
+    <div class="stage">
+      <div>
+        <p class="frame-label">Desktop</p>
+        <div class="desk"><div class="f" data-form="d"></div></div>
+      </div>
+      <div>
+        <p class="frame-label">Mobile</p>
+        <div class="phone"><div class="notch"></div><div class="f" data-form="m"></div></div>
+      </div>
+    </div>
+    <h3 class="sub-title">What the numbers point to</h3>
+    <ul class="notes-list">
+      <li><span class="tagdot">1</span><span><b>Grouped sections.</b> Three light headings (About you, Your trip, Who's travelling) break the form into easy chunks. Same orange Send button and same look as the site today.</span></li>
+      <li><span class="tagdot">2</span><span><b>Contact preference as two buttons.</b> Phone or Email side by side replaces the small toggle, which is hard to read on a phone and not clear about which way is "on".</span></li>
+      <li><span class="tagdot">3</span><span><b>Departure point starts blank</b> with "Select departure point" and must be chosen before sending.</span></li>
+      <li><span class="tagdot">4</span><span><b>End date follows the start date.</b> When a start date is picked, the end date calendar opens on that month and can't be set earlier than the start.</span></li>
+      <li><span class="tagdot">5</span><span><b>Children's ages open per child.</b> Choose 2 children and two age boxes appear. Choose 0 and nothing shows.</span></li>
+      <li><span class="tagdot">6</span><span><b>Newsletter tick with clearer wording</b> so the customer knows what they're agreeing to, kept unticked by default.</span></li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="fields">
+    <h2 class="section-title"><span class="num">3</span>Field by field</h2>
+    <p class="section-sub">Every field on the form, what changes, and why.</p>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Field</th><th>Status</th><th>Change</th><th>Why</th></tr>
+      <tr><td><b>Message</b></td><td><span class="pill-tag">No change</span></td><td>Moved to the end of the form, renamed "Anything else we should know?"</td><td>Customers fill in the structured details first; the free text becomes the extras.</td></tr>
+      <tr><td><b>Name / Surname</b></td><td><span class="pill-tag">No change</span></td><td>Side by side on desktop, stacked on mobile.</td><td>Already a clean match to First and Last Name in Fresh.</td></tr>
+      <tr><td><b>Email</b></td><td><span class="pill-tag">No change</span></td><td>Mobile keyboard set to email type.</td><td>Fewer typing errors on phones.</td></tr>
+      <tr><td><b>Code + Phone number</b></td><td><span class="pill-tag change">Change</span></td><td>Stay as two boxes for the customer; joined into one number (e.g. +27821234567) before it reaches Fresh. Number keypad on mobile.</td><td>WhatsApp needs the +27 included. We've already seen messages fail without it.</td></tr>
+      <tr><td><b>Prefer to be contacted by</b></td><td><span class="pill-tag change">Change</span></td><td>Two buttons (Phone / Email) instead of the toggle. Still compulsory.</td><td>Clearer on mobile; feeds a Fresh field so follow-ups can respect it.</td></tr>
+      <tr><td><b>Departure point</b></td><td><span class="pill-tag change">Change</span></td><td>Blank by default, compulsory, new hubs added. See section 5.</td><td>Today it defaults to Self-Drive, so we can't tell a real choice from a skipped one.</td></tr>
+      <tr><td><b>Start date / End date</b></td><td><span class="pill-tag change">Change</span></td><td>No pre-filled dates. End date opens on the start date's month and can't be earlier.</td><td>Pre-filled dates get sent unchanged and look like real travel dates.</td></tr>
+      <tr><td><b>My dates are flexible</b></td><td><span class="pill-tag">No change</span></td><td>Passed through to Fresh as a Yes/No.</td><td>Helps the consultant offer better value dates.</td></tr>
+      <tr><td><b>Adults</b></td><td><span class="pill-tag change">Change</span></td><td>Dropdown 1 to 10 (default blank), compulsory.</td><td>Stops typing errors and blank enquiries.</td></tr>
+      <tr><td><b>Children</b></td><td><span class="pill-tag change">Change</span></td><td>Dropdown 0 to 6 (default 0).</td><td>Drives the age boxes below it.</td></tr>
+      <tr><td><b>Children's ages</b></td><td><span class="pill-tag new">New behaviour</span></td><td>One age dropdown per child. See section 4.</td><td>Pricing depends on each child's age; today we often have to ask again.</td></tr>
+      <tr><td><b>Sign up for travel deals</b></td><td><span class="pill-tag change">Change</span></td><td>Clearer wording, unticked by default, creates a separate marketing subscription. See section 7.</td><td>Opt-in must be clear and kept separate from the enquiry itself.</td></tr>
+      <tr><td><b>Package link</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>The link to the package page the form was sent from, with "/enquire" removed so it opens the package itself.</td><td>Consultants open the full package in one click. See section 9.</td></tr>
+      <tr><td><b>Package reference</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>Already shown on the form (e.g. PP-TH10079388); sent through to Fresh.</td><td>Links the enquiry to the exact package.</td></tr>
+      <tr><td><b>Property name</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>Short hotel or property name from the package details on the site (e.g. Pearle Beach Resort &amp; Spa).</td><td>Builds the enquiry name. See section 6.</td></tr>
+      <tr><td><b>Destination</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>Destination from the package details on the site (e.g. Mauritius).</td><td>Enquiry name fallback, destination reporting and newsletter interest.</td></tr>
+      <tr><td><b>Form source</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>"Package enquiry" or "Newsletter sign-up".</td><td>So Fresh knows which form a record came from.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="children">
+    <h2 class="section-title"><span class="num">4</span>Children's ages</h2>
+    <p class="section-sub">How the per-child age boxes should behave.</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Behaviour</div><h4>Number opens the boxes</h4><p>Choosing 3 in Children shows Child 1, Child 2 and Child 3 age boxes. Changing it to 1 removes the extra two. 0 shows nothing.</p></div>
+      <div class="card"><div class="mini">Options</div><h4>Ages as a dropdown</h4><p>"Under 2", then 2 to 17. No typing, so the data always arrives the same way.</p></div>
+      <div class="card"><div class="mini">Wording</div><h4>Age on the travel date</h4><p>Small hint under the boxes: "Age on the date of travel". Many package prices change at a birthday.</p></div>
+      <div class="card"><div class="mini">Rule</div><h4>Ages required</h4><p>If children are selected, each age must be chosen before sending.</p></div>
+    </div>
+    <div class="rule"><b>More than 6 children?</b> The dropdown stops at 6 and a small line reads "Travelling with more? Add the details in the message." Large groups are rare and best handled by a consultant anyway.</div>
+    <h3 class="sub-title">How it arrives in Fresh</h3>
+    <p>Rather than six separate age fields, I'd suggest the ages are combined into one tidy line, plus two helpers that make reporting and lists easy:</p>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Fresh field</th><th>Example</th><th>Use</th></tr>
+      <tr><td>Number of Children</td><td>3</td><td>Counts, family reporting</td></tr>
+      <tr><td>Children's Ages</td><td>Under 2, 7, 11</td><td>What the consultant reads to quote</td></tr>
+      <tr><td>Travelling with infant (under 2)</td><td>Yes</td><td>Flight and cot requirements at a glance</td></tr>
+      <tr><td>Family enquiry</td><td>Yes (any children)</td><td>Feeds a family interest segment later</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="departure">
+    <h2 class="section-title"><span class="num">5</span>Departure point</h2>
+    <p class="section-sub">Blank by default, compulsory, and three more hubs.</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Default</div><h4>"Select departure point"</h4><p>Greyed placeholder, not a real option. The form won't send until a choice is made, with a gentle message: "Please choose where you'll be travelling from."</p></div>
+      <div class="card"><div class="mini">Keep</div><h4>All five current options</h4><p>Johannesburg, Cape Town, Durban, Self-Drive and Other stay exactly as worded today.</p></div>
+      <div class="card"><div class="mini">Add</div><h4>Three more hubs</h4><p>Port Elizabeth (Gqeberha), East London, Bloemfontein.</p></div>
+    </div>
+    <h3 class="sub-title">The full list, in this order</h3>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>#</th><th>Option</th><th>Status</th></tr>
+      <tr><td></td><td style="color:var(--slate)">Select departure point</td><td><span class="pill-tag change">Placeholder</span></td></tr>
+      <tr><td>1</td><td>Johannesburg</td><td><span class="pill-tag">Current</span></td></tr>
+      <tr><td>2</td><td>Cape Town</td><td><span class="pill-tag">Current</span></td></tr>
+      <tr><td>3</td><td>Durban</td><td><span class="pill-tag">Current</span></td></tr>
+      <tr><td>4</td><td>Port Elizabeth (Gqeberha)</td><td><span class="pill-tag new">New</span></td></tr>
+      <tr><td>5</td><td>East London</td><td><span class="pill-tag new">New</span></td></tr>
+      <tr><td>6</td><td>Bloemfontein</td><td><span class="pill-tag new">New</span></td></tr>
+      <tr><td>7</td><td>Self-Drive</td><td><span class="pill-tag">Current</span></td></tr>
+      <tr><td>8</td><td>Other</td><td><span class="pill-tag">Current</span></td></tr>
+    </table></div>
+    <div class="rule"><b>Why this order:</b> the three main airports first, then the regional airports, with Self-Drive and Other at the end as the non-flying choices. Port Elizabeth carries Gqeberha in brackets so it's recognised either way. I'll set up the Departure Point dropdown in Fresh with exactly these eight options, word for word, so every value lands cleanly.</div>
+  </section>
+
+  <!-- 6 -->
+  <section class="block" id="naming">
+    <h2 class="section-title"><span class="num">6</span>Enquiry names</h2>
+    <p class="section-sub">Simple, and easy to spot in the pipeline at a glance.</p>
+    <div class="rule"><b>The format: Hotel or Destination - Surname.</b> The hotel always comes first when we know it, because "Oyster Box" tells a consultant far more than "KZN". The surname makes it easy to find the right enquiry when a customer phones in. Status lives in the pipeline stage, and dates, reference and page link live in their own fields, so the name doesn't need to carry them.</div>
+    <h3 class="sub-title">How the name is built</h3>
+    <div class="flow">
+      <div class="node hl"><b>1. Property name</b>If the page is a hotel or package, use the short property name.</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>2. Destination</b>If there's no property (a destination or deals page), use the destination.</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>3. General</b>If neither, use "General". The consultant renames it once the hotel is known.</div>
+    </div>
+    <p>Synapse sends the short property name and the destination as hidden fields from the package details the site already holds, and Zapier puts the name together before the enquiry lands in Fresh. We don't work it out from the web address, because the address runs the hotel and destination together with no break between them.</p>
+    <h3 class="sub-title">Worked examples from live packages</h3>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Package page</th><th>Property name</th><th>Destination</th><th>Enquiry name</th></tr>
+      <tr><td>4* aha Alpine Heath Resort, Northern Drakensberg (2 nights)<br><span style="color:var(--slate);font-size:11px">PP-TH10019033</span></td><td>aha Alpine Heath Resort</td><td>Northern Drakensberg</td><td><b>aha Alpine Heath Resort - Mokoena</b></td></tr>
+      <tr><td>4* Pearle Beach Resort and Spa, Mauritius (7 nights)<br><span style="color:var(--slate);font-size:11px">PP-TH10060577</span></td><td>Pearle Beach Resort &amp; Spa</td><td>Mauritius</td><td><b>Pearle Beach Resort &amp; Spa - Naidoo</b></td></tr>
+      <tr><td>4* Chobe Princess Safari Boat and 4* Ichingo Chobe River Lodge (3 night combo)<br><span style="color:var(--slate);font-size:11px">PP-TH10086585</span></td><td>Chobe Princess &amp; Ichingo</td><td>Chobe</td><td><b>Chobe Princess &amp; Ichingo - Smith</b></td></tr>
+      <tr><td>3* Plus Coin De Mire Attitude, Mauritius Family Package (5 nights)<br><span style="color:var(--slate);font-size:11px">PP-TH10079388</span></td><td>Coin De Mire Attitude</td><td>Mauritius</td><td><b>Coin De Mire Attitude - Dlamini</b></td></tr>
+      <tr><td>Mauritius destination page</td><td></td><td>Mauritius</td><td><b>Mauritius - Botha</b></td></tr>
+      <tr><td>Home page, chat or WhatsApp</td><td></td><td></td><td><b>General - Pillay</b></td></tr>
+    </table></div>
+    <p style="font-size:11.5px;color:var(--slate)">Surnames are examples only.</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Combo packages</div><h4>Both properties, shortened</h4><p>Joined with "&amp;" and kept short, e.g. Chobe Princess &amp; Ichingo. The short name is set once when the package is loaded on the site.</p></div>
+      <div class="card"><div class="mini">Chat and WhatsApp</div><h4>Start as General</h4><p>Enquiries created from chats arrive as "General - Surname". Renaming it once the hotel is known becomes part of the consultant's routine.</p></div>
+      <div class="card"><div class="mini">Star ratings</div><h4>Left out of the name</h4><p>"4*" and "3* Plus" stay on the package page. The name is just the property.</p></div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="block" id="newsletter">
+    <h2 class="section-title"><span class="num">7</span>Newsletter split</h2>
+    <p class="section-sub">Keeping enquiries and marketing subscribers apart, while both reach Fresh.</p>
+    <div class="rule">An enquiry and a newsletter sign-up are two different things, even when the same person does both. The enquiry is them asking us for something. The newsletter is permission to market to them. They need to stay separate so we can respect opt-outs and POPIA, and so the enquiry follow-ups don't get mixed up with marketing.</div>
+
+    <h3 class="sub-title">Two ways people subscribe</h3>
+    <div class="flow">
+      <div class="node"><b>Enquiry form tick</b>Customer ticks "Send me travel deals" while enquiring.</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node hl"><b>Zapier checks the tick</b>Enquiry always goes to Fresh. Only if ticked, a subscription is added too.</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>Fresh</b>Contact + Enquiry, and (if ticked) added to the matching list.</div>
+    </div>
+    <div class="flow">
+      <div class="node"><b>Newsletter sign-up form</b>The expanded sign-up on the site (Kim is getting Synapse to add a home page link to it).</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node hl"><b>Zapier</b>No enquiry created. Subscription only, with the page it came from.</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>Fresh</b>Marketing contact, added to the matching list.</div>
+    </div>
+
+    <h3 class="sub-title">The two forms side by side</h3>
+    <div class="compare">
+      <div class="col before">
+        <h4>Enquiry form tick (simple)</h4>
+        <ul>
+          <li>One tick box, nothing else asked</li>
+          <li>We already have name, email and phone from the enquiry</li>
+          <li>Interest is picked up quietly from the page link (see below)</li>
+          <li>Stays simple on purpose; the enquiry is the main job of this form</li>
+        </ul>
+      </div>
+      <div class="col after">
+        <h4>"Sign up to our exclusive travel deals" (expanded)</h4>
+        <ul>
+          <li>First Name, Last Name, Email, Phone Number</li>
+          <li>Region dropdown</li>
+          <li>Are you a Travel Agent? (Yes / No)</li>
+          <li>14 interest tick boxes, from Beach Destinations to Sports Travel</li>
+          <li>Interests come straight from the customer</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-title">The audience split: Travel Agent = Yes</h3>
+    <div class="rule">Travel agent sign-ups are kept separate from holiday customer sign-ups. When "Are you a Travel Agent?" is <b>Yes</b>, Zapier places them in their own Travel Agent list, with the same details. When it's <b>No</b>, they go to the Travel Deals Subscribers list as normal.</div>
+    <div class="rule"><b>Keeping them separate:</b> travel agent sign-ups sit in their own list and are not included in any Thompsons For Travel customer communication. This keeps the two audiences clearly apart and means their details are looked after properly.</div>
+
+    <h3 class="sub-title">Picking up the interest from the page (enquiry tick only)</h3>
+    <p>For the simple tick, splitting on the page link makes sense, as long as we keep it light. The site already separates <b>Destinations</b> from <b>Local Destinations</b> in its menu, and the page link usually names the destination. So the tick can quietly pick up:</p>
+    <ul>
+      <li><b>Local or International</b>, from which part of the site the page sits in</li>
+      <li><b>The destination</b> where the page names one (e.g. a Mauritius package page)</li>
+      <li><b>Family</b> where the enquiry includes children</li>
+    </ul>
+    <p>The expanded sign-up doesn't need this as much, because the customer tells us their interests directly, but we'd still capture the page link so we know where sign-ups come from.</p>
+    <div class="rule"><b>Alongside Mailchimp:</b> the expanded sign-up keeps sending to Mailchimp as it does today, and Zapier also sends each sign-up to Fresh.</div>
+
+    <h3 class="sub-title">Anchor link to the sign-up</h3>
+    <p>Kim is asking Synapse for a direct link that jumps straight to the "Sign up to our exclusive travel deals" section. Once we have it, it gets used in three places:</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Tommy</div><h4>Fresh bot</h4><p>Added to Tommy's knowledge so when a customer asks about deals, specials or newsletters, Tommy shares the link.</p></div>
+      <div class="card"><div class="mini">Team</div><h4>Chat canned response</h4><p>A saved reply in Fresh the consultants can drop in at the end of a chat: "Would you like our latest deals? You can sign up here."</p></div>
+      <div class="card"><div class="mini">Everywhere else</div><h4>Signatures and SharePoint</h4><p>Email signature line and a link on the Knowledge Hub Resources page so the team always knows where it is.</p></div>
+    </div>
+    <div class="rule"><b>Next step:</b> once Synapse adds the link (the home page address ending in <code>#newsletter</code>), I'll test it on desktop and phone, then add it to Tommy, the canned response and SharePoint.</div>
+
+    <h3 class="sub-title">Consent wording (suggested)</h3>
+    <div class="card"><p style="color:var(--ink);margin:0">&#9744; <b>Yes, send me travel deals and inspiration from Thompsons For Travel.</b> You can unsubscribe at any time.</p></div>
+  </section>
+
+  <!-- 7 -->
+  <section class="block" id="lists">
+    <h2 class="section-title"><span class="num">8</span>Lists in Fresh</h2>
+    <p class="section-sub">A small set of lists, with the detail held in fields rather than in more lists.</p>
+    <div class="rule"><b>The principle:</b> lists are for who has said yes; fields are for what they're interested in. If we made a list for every destination we'd end up with dozens to maintain. Instead, a few lists plus a couple of interest fields let us pull any group we need later (for example, "international subscribers interested in Mauritius with children") as a saved view, without anyone building a new list.</div>
+    <div class="comp-grid">
+      <div class="card list-card"><div class="mini">List 1 &middot; Customers</div><h4>Travel Deals Subscribers</h4><p>Every holiday customer who has opted in, from either form. The one master marketing list, and the one opt-outs are managed against.</p></div>
+      <div class="card list-card alt"><div class="mini">List 2 &middot; Travel agents</div><h4>Travel Agent Subscribers</h4><p>Anyone who answered Yes to "Are you a Travel Agent?". Kept separate from customer sign-ups and not included in Thompsons For Travel customer communication.</p></div>
+    </div>
+    <p>That's it: two lists. Everything else is done with themes and fields, which become saved views in Fresh rather than lists to look after.</p>
+
+    <h3 class="sub-title">Themes: 14 interests grouped into 6</h3>
+    <p>We keep all 14 ticks exactly as the customer chose them, but group them into six themes that suit the way Thompsons For Travel sells. A theme can be used as a group when needed, and nobody has to manage 14 audiences.</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Theme 1</div><h4>Beach &amp; Islands</h4><p>Beach Destinations, All Inclusive Holidays</p></div>
+      <div class="card"><div class="mini">Theme 2</div><h4>Family Time</h4><p>Family Holidays, School Holiday Breaks (plus anyone who enquired with children)</p></div>
+      <div class="card"><div class="mini">Theme 3</div><h4>Local is Lekker</h4><p>Local is Lekker (plus enquiries from local pages)</p></div>
+      <div class="card"><div class="mini">Theme 4</div><h4>Safari &amp; Adventure</h4><p>Bush Getaways, Adventure, Sports Travel</p></div>
+      <div class="card"><div class="mini">Theme 5</div><h4>Romance &amp; Luxury</h4><p>Romantic Getaways, Luxury Holidays</p></div>
+      <div class="card"><div class="mini">Theme 6</div><h4>Journeys &amp; Cities</h4><p>City Breaks, Cruising, Rail Trips, Solo Travel</p></div>
+    </div>
+    <div class="rule">These six are a starting suggestion. They can be renamed or regrouped easily later, because the original 14 ticks are still stored on each contact.</div>
+
+    <h3 class="sub-title">Fields that sit behind the lists</h3>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Field</th><th>Values</th><th>Filled by</th></tr>
+      <tr><td>Interests</td><td>The 14 tick boxes, as chosen</td><td>Expanded sign-up</td></tr>
+      <tr><td>Interest Themes</td><td>The 6 themes above</td><td>Zapier, from the ticks</td></tr>
+      <tr><td>Region</td><td>Same options as the sign-up dropdown</td><td>Expanded sign-up</td></tr>
+      <tr><td>Travel Agent</td><td>Yes / No</td><td>Expanded sign-up</td></tr>
+      <tr><td>Travel Interest</td><td>Local / International / Not set</td><td>Page link</td></tr>
+      <tr><td>Destination Interest</td><td>Matches the destination group list we already planned (Africa, Dubai, Far East, Indian Ocean Islands, Worldwide), plus Local</td><td>Page link, or consultant</td></tr>
+      <tr><td>Family Traveller</td><td>Yes / No</td><td>Children on the enquiry</td></tr>
+      <tr><td>Subscription Source</td><td>Enquiry form / Newsletter sign-up</td><td>Hidden field</td></tr>
+      <tr><td>Sign-up Page</td><td>Full page link</td><td>Hidden field</td></tr>
+      <tr><td>Subscribed On</td><td>Date</td><td>Zapier</td></tr>
+    </table></div>
+    <div class="rule"><b>Collecting first.</b> The focus for now is gathering clean, consented details in Fresh so the lists are well organised and ready to use. WhatsApp messages would need their own separate opt-in; the email tick doesn't cover it.</div>
+  </section>
+
+  <!-- 8 -->
+  <section class="block" id="fresh">
+    <h2 class="section-title"><span class="num">9</span>Fields for Fresh</h2>
+    <p class="section-sub">What I'll set up in Fresh to receive the form, for us to check together on Thursday.</p>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Form</th><th>Fresh record</th><th>Fresh field</th><th>Type</th></tr>
+      <tr><td>Name / Surname</td><td>Contact</td><td>First Name / Last Name</td><td>Standard</td></tr>
+      <tr><td>Email</td><td>Contact</td><td>Email</td><td>Standard</td></tr>
+      <tr><td>Code + Phone</td><td>Contact</td><td>Mobile (joined, +27...)</td><td>Standard</td></tr>
+      <tr><td>Prefer to be contacted by</td><td>Contact</td><td>Preferred Contact Method</td><td>Dropdown</td></tr>
+      <tr><td>Departure point</td><td>Enquiry</td><td>Departure Point</td><td>Dropdown (matches form)</td></tr>
+      <tr><td>Start / End date</td><td>Enquiry</td><td>Travel Start / Travel End</td><td>Date</td></tr>
+      <tr><td>Dates flexible</td><td>Enquiry</td><td>Flexible Dates</td><td>Checkbox</td></tr>
+      <tr><td>Adults</td><td>Enquiry</td><td>Number of Adults</td><td>Number</td></tr>
+      <tr><td>Children + ages</td><td>Enquiry</td><td>Number of Children, Children's Ages, Travelling with infant</td><td>Number, Text, Checkbox</td></tr>
+      <tr><td>Message</td><td>Enquiry</td><td>Enquiry Notes</td><td>Text area</td></tr>
+      <tr><td>Reference / Package link</td><td>Enquiry</td><td>Package Reference, Package Link</td><td>Text, URL (clickable)</td></tr>
+      <tr><td>Property name / Destination</td><td>Enquiry</td><td>Property, Destination</td><td>Text</td></tr>
+      <tr><td>Built by Zapier</td><td>Enquiry</td><td>Enquiry Name (Hotel or Destination - Surname)</td><td>Name</td></tr>
+      <tr><td>Newsletter tick</td><td>Contact</td><td>Travel Deals Subscribers list + Travel Interest (section 8)</td><td>List / Dropdown</td></tr>
+      <tr><td colspan="4" style="background:var(--cyan-soft);font-weight:700;color:var(--navy)">Expanded newsletter sign-up</td></tr>
+      <tr><td>First / Last Name, Email, Phone</td><td>Contact</td><td>Standard fields (phone joined with +27)</td><td>Standard</td></tr>
+      <tr><td>Region</td><td>Contact</td><td>Region</td><td>Dropdown (matches form)</td></tr>
+      <tr><td>Are you a Travel Agent?</td><td>Contact</td><td>Travel Agent, decides which list</td><td>Yes / No</td></tr>
+      <tr><td>Interests (14)</td><td>Contact</td><td>Interests + Interest Themes</td><td>Multi-select</td></tr>
+    </table></div>
+    <h3 class="sub-title">Package link on every enquiry</h3>
+    <p>The consultant should never have to search the website to see what the customer was looking at. The package link arrives two ways:</p>
+    <div class="comp-grid">
+      <div class="card"><div class="mini">Dedicated field</div><h4>Package Link</h4><p>A clickable link field near the top of the enquiry, next to the Package Reference. One click opens the package with its inclusions, pricing, kids pricing and travel window.</p></div>
+      <div class="card"><div class="mini">Note</div><h4>Enquiry summary note</h4><p>Zapier also adds a short note to the enquiry timeline with the package name, link, travel dates, travellers and the customer's message, so everything is in one place at a glance.</p></div>
+      <div class="card"><div class="mini">Clean link</div><h4>Opens the package, not the form</h4><p>Form links end in "/enquire". Zapier removes that so the link opens the package page itself.</p></div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div class="mini">Example summary note</div>
+      <p style="color:var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;line-height:1.8;margin:0">
+      Website enquiry: Pearle Beach Resort &amp; Spa<br>
+      Reference: PP-TH10060577<br>
+      Link: thompsons.co.za/holiday-packages/4-pearle-beach-resort-and-spa-mauritius-package-7-nights-1/PP-TH10060577<br>
+      Travel: 12 Mar 2027 to 19 Mar 2027 (flexible)<br>
+      Departing: Johannesburg<br>
+      Travellers: 2 adults, 2 children (7, 11)<br>
+      Message: Would like a sea view room if possible</p>
+    </div>
+    <div class="rule"><b>If a package is later removed from the site,</b> the reference number and the summary note still show what the customer asked about, so nothing is lost.</div>
+    <div class="rule">Field names here are my working names. I'll keep them in line with the Enquiries pipeline we agreed in Cape Town, and share the final list with Kim so Synapse and Zapier use exactly the same labels.</div>
+  </section>
+
+  <!-- 9 -->
+  <section class="block" id="thursday">
+    <h2 class="section-title"><span class="num">10</span>For Thursday</h2>
+    <p class="section-sub">What we'll go through with Kim before the brief goes to Synapse.</p>
+    <ul class="check-list">
+      <li>Run through the new layout, children's ages and the departure list</li>
+      <li>Enquiry naming: Hotel or Destination - Surname, with property name and destination sent as hidden fields</li>
+      <li>Newsletter tick wording, with a quick check with Chantelle as POPIA officer</li>
+      <li>Travel Agent = Yes routing to its own list, and the six interest themes</li>
+      <li>The #newsletter anchor link from Synapse</li>
+      <li>Which other pages use the same form, so the changes carry across</li>
+      <li>Timing from Synapse, and a phone test before go-live: one enquiry with children, one with the newsletter tick, one sign-up only, one travel agent sign-up</li>
+    </ul>
+  </section>
+</div>
+
+<footer>Thompsons For Travel &middot; Enquiry Form Brief &middot; Prepared by Robyn Hammond &middot; October 2026 &middot; Internal working document</footer>
+
+<script>
+const DEP_ALL=["Johannesburg","Cape Town","Durban","Port Elizabeth (Gqeberha)","East London","Bloemfontein","Self-Drive","Other"];
+function formHTML(id){
+  const opt=(n)=>Array.from({length:n},(_,i)=>`<option>${i+1}</option>`).join('');
+  return `
+  <div class="ref"><span>Package enquiry</span><span>Reference PP-TH10079388</span></div>
+  <div class="grp">About you <span class="tagdot">1</span></div>
+  <div class="row"><div><label>Name<span class="req">*</span></label><input></div><div><label>Surname<span class="req">*</span></label><input></div></div>
+  <div class="field"><label>Email<span class="req">*</span></label><input type="email"></div>
+  <div class="row code"><div><label>Code<span class="req">*</span></label><select><option>+27 SA</option></select></div><div><label>Phone number<span class="req">*</span></label><input type="tel" inputmode="tel"></div></div>
+  <div class="field"><label>Prefer to be contacted by<span class="req">*</span><span class="tagdot">2</span></label>
+    <div class="seg"><button type="button" class="on">Phone</button><button type="button">Email</button></div></div>
+  <div class="grp">Your trip</div>
+  <div class="field"><label>Departure point<span class="req">*</span><span class="tagdot">3</span></label>
+    <select class="empty dep"><option value="" selected disabled>Select departure point</option>
+    ${DEP_ALL.map(o=>`<option>${o}</option>`).join('')}</select></div>
+  <div class="row keep2"><div><label>Start date<span class="tagdot">4</span></label><input type="date" class="sd"></div><div><label>End date</label><input type="date" class="ed"></div></div>
+  <label class="check"><input type="checkbox"><span>My dates are flexible</span></label>
+  <div class="grp">Who's travelling</div>
+  <div class="row keep2"><div><label>Adults<span class="req">*</span></label><select class="empty"><option value="" selected disabled>Select</option>${opt(10)}</select></div>
+  <div><label>Children<span class="tagdot">5</span></label><select class="kids"><option>0</option>${opt(6)}</select></div></div>
+  <div class="ages"><div class="lbl">Children's ages</div><div class="ages-grid"></div><div class="hint">Age on the date of travel. Travelling with more than 6? Add the details in the message.</div></div>
+  <div class="field"><label>Anything else we should know?</label><textarea></textarea></div>
+  <label class="check"><input type="checkbox"><span>Yes, send me travel deals and inspiration from Thompsons For Travel. <span class="tagdot">6</span><small>You can unsubscribe at any time.</small></span></label>
+  <button class="send" type="button">SEND</button>
+  <div class="privacy">Your privacy is important to us. By submitting your information, you agree to the use of it as explained in our privacy policy.</div>`;
+}
+document.querySelectorAll('[data-form]').forEach(el=>{
+  el.innerHTML=formHTML(el.dataset.form);
+  const kids=el.querySelector('.kids'),ages=el.querySelector('.ages'),grid=el.querySelector('.ages-grid');
+  const ageOpts='<option value="" selected disabled>Age</option><option>Under 2</option>'+Array.from({length:16},(_,i)=>`<option>${i+2}</option>`).join('');
+  kids.addEventListener('change',()=>{
+    const n=+kids.value;grid.innerHTML='';
+    for(let i=1;i<=n;i++)grid.insertAdjacentHTML('beforeend',`<div><label>Child ${i}<span class="req">*</span></label><select>${ageOpts}</select></div>`);
+    ages.classList.toggle('show',n>0);
+  });
+  el.querySelectorAll('select.empty').forEach(s=>s.addEventListener('change',()=>s.classList.remove('empty')));
+  el.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{b.parentNode.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}));
+  const sd=el.querySelector('.sd'),ed=el.querySelector('.ed');
+  sd.addEventListener('change',()=>{ed.min=sd.value;if(!ed.value||ed.value<sd.value)ed.value=sd.value;});
+});
+</script>
+</body>
+</html>
