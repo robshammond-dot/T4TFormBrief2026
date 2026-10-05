@@ -175,7 +175,7 @@
           <li>Departure point starts blank and must be chosen</li>
           <li>Added: Port Elizabeth (Gqeberha), East London, Bloemfontein</li>
           <li>Newsletter tick creates a separate marketing subscription, with the interest picked up from the page</li>
-          <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 themes, two lists only</li>
+          <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 interest groups, two lists only</li>
           <li>Anchor link to the sign-up for Tommy and the team</li>
           <li>Grouped sections, one column on mobile, bigger tap areas</li>
           <li>Hidden fields carry the page link, reference, property name and destination</li>
@@ -311,7 +311,7 @@
     <p style="font-size:11.5px;color:var(--slate)">Surnames are examples only.</p>
     <div class="comp-grid">
       <div class="card"><div class="mini">Combo packages</div><h4>Both properties, shortened</h4><p>Joined with "&amp;" and kept short, e.g. Chobe Princess &amp; Ichingo. The short name is set once when the package is loaded on the site.</p></div>
-      <div class="card"><div class="mini">Chat and WhatsApp</div><h4>Start as General</h4><p>Enquiries created from chats arrive as "General - Surname". Renaming it once the hotel is known becomes part of the consultant's routine.</p></div>
+      <div class="card"><div class="mini">Chat and WhatsApp</div><h4>Start as General</h4><p>Enquiries created from chats arrive as "General - Surname". Renaming it once the hotel is known becomes part of the consultant's routine. This depends on the webhook for chats and the inbox, which still needs to be quoted and signed off.</p></div>
       <div class="card"><div class="mini">Star ratings</div><h4>Left out of the name</h4><p>"4*" and "3* Plus" stay on the package page. The name is just the property.</p></div>
     </div>
   </section>
@@ -397,17 +397,17 @@
       <div class="card list-card"><div class="mini">List 1 &middot; Customers</div><h4>Travel Deals Subscribers</h4><p>Every holiday customer who has opted in, from either form. The one master marketing list, and the one opt-outs are managed against.</p></div>
       <div class="card list-card alt"><div class="mini">List 2 &middot; Travel agents</div><h4>Travel Agent Subscribers</h4><p>Anyone who answered Yes to "Are you a Travel Agent?". Kept separate from customer sign-ups and not included in Thompsons For Travel customer communication.</p></div>
     </div>
-    <p>That's it: two lists. Everything else is done with themes and fields, which become saved views in Fresh rather than lists to look after.</p>
+    <p>That's it: two lists. Everything else is done with interest groups and fields, which become saved views in Fresh rather than lists to look after.</p>
 
-    <h3 class="sub-title">Themes: 14 interests grouped into 6</h3>
-    <p>We keep all 14 ticks exactly as the customer chose them, but group them into six themes that suit the way Thompsons For Travel sells. A theme can be used as a group when needed, and nobody has to manage 14 audiences.</p>
+    <h3 class="sub-title">Interest groups: 14 interests grouped into 6</h3>
+    <p>We keep all 14 ticks exactly as the customer chose them, but group them into six interest groups that suit the way Thompsons For Travel sells. A group can be used as a whole when needed, and nobody has to manage 14 audiences.</p>
     <div class="comp-grid">
-      <div class="card"><div class="mini">Theme 1</div><h4>Beach &amp; Islands</h4><p>Beach Destinations, All Inclusive Holidays</p></div>
-      <div class="card"><div class="mini">Theme 2</div><h4>Family Time</h4><p>Family Holidays, School Holiday Breaks (plus anyone who enquired with children)</p></div>
-      <div class="card"><div class="mini">Theme 3</div><h4>Local is Lekker</h4><p>Local is Lekker (plus enquiries from local pages)</p></div>
-      <div class="card"><div class="mini">Theme 4</div><h4>Safari &amp; Adventure</h4><p>Bush Getaways, Adventure, Sports Travel</p></div>
-      <div class="card"><div class="mini">Theme 5</div><h4>Romance &amp; Luxury</h4><p>Romantic Getaways, Luxury Holidays</p></div>
-      <div class="card"><div class="mini">Theme 6</div><h4>Journeys &amp; Cities</h4><p>City Breaks, Cruising, Rail Trips, Solo Travel</p></div>
+      <div class="card"><div class="mini">Group 1</div><h4>Beach &amp; Islands</h4><p>Beach Destinations, All Inclusive Holidays</p></div>
+      <div class="card"><div class="mini">Group 2</div><h4>Family Time</h4><p>Family Holidays, School Holiday Breaks (plus anyone who enquired with children)</p></div>
+      <div class="card"><div class="mini">Group 3</div><h4>Local is Lekker</h4><p>Local is Lekker (plus enquiries from local pages)</p></div>
+      <div class="card"><div class="mini">Group 4</div><h4>Safari &amp; Adventure</h4><p>Bush Getaways, Adventure, Sports Travel</p></div>
+      <div class="card"><div class="mini">Group 5</div><h4>Romance &amp; Luxury</h4><p>Romantic Getaways, Luxury Holidays</p></div>
+      <div class="card"><div class="mini">Group 6</div><h4>Journeys &amp; Cities</h4><p>City Breaks, Cruising, Rail Trips, Solo Travel</p></div>
     </div>
     <div class="rule">These six are a starting suggestion. They can be renamed or regrouped easily later, because the original 14 ticks are still stored on each contact.</div>
 
@@ -415,7 +415,7 @@
     <div class="tbl-wrap"><table class="spec">
       <tr><th>Field</th><th>Values</th><th>Filled by</th></tr>
       <tr><td>Interests</td><td>The 14 tick boxes, as chosen</td><td>Expanded sign-up</td></tr>
-      <tr><td>Interest Themes</td><td>The 6 themes above</td><td>Zapier, from the ticks</td></tr>
+      <tr><td>Interest Groups</td><td>The 6 interest groups above</td><td>Zapier, from the ticks</td></tr>
       <tr><td>Region</td><td>Same options as the sign-up dropdown</td><td>Expanded sign-up</td></tr>
       <tr><td>Travel Agent</td><td>Yes / No</td><td>Expanded sign-up</td></tr>
       <tr><td>Travel Interest</td><td>Local / International / Not set</td><td>Page link</td></tr>
@@ -452,7 +452,7 @@
       <tr><td>First / Last Name, Email, Phone</td><td>Contact</td><td>Standard fields (phone joined with +27)</td><td>Standard</td></tr>
       <tr><td>Region</td><td>Contact</td><td>Region</td><td>Dropdown (matches form)</td></tr>
       <tr><td>Are you a Travel Agent?</td><td>Contact</td><td>Travel Agent, decides which list</td><td>Yes / No</td></tr>
-      <tr><td>Interests (14)</td><td>Contact</td><td>Interests + Interest Themes</td><td>Multi-select</td></tr>
+      <tr><td>Interests (14)</td><td>Contact</td><td>Interests + Interest Groups</td><td>Multi-select</td></tr>
     </table></div>
     <h3 class="sub-title">Package link on every enquiry</h3>
     <p>The consultant should never have to search the website to see what the customer was looking at. The package link arrives two ways:</p>
@@ -484,10 +484,10 @@
       <li>Run through the new layout, children's ages and the departure list</li>
       <li>Enquiry naming: Hotel or Destination - Surname, with property name and destination sent as hidden fields</li>
       <li>Newsletter tick wording, with a quick check with Chantelle as POPIA officer</li>
-      <li>Travel Agent = Yes routing to its own list, and the six interest themes</li>
+      <li>Travel Agent = Yes routing to its own list, and the six interest groups</li>
       <li>The #newsletter anchor link from Synapse</li>
       <li>Which other pages use the same form, so the changes carry across</li>
-      <li>When Synapse can schedule the changes</li>
+      <li>When Synapse can schedule the changes. We need them live by the week of 9 November, so the data can be checked in Fresh during the CRM build.</li>
       <li>Testing before go-live: an enquiry with children, an enquiry with the newsletter ticked, a newsletter sign-up, and a travel agent sign-up, each checked in Fresh</li>
     </ul>
   </section>
