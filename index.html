@@ -127,12 +127,16 @@
     .head-inner{padding:6px 0 4px}.wave{height:18px}.wrap{padding:0;max-width:none}
     section.block{box-shadow:none;break-inside:auto;page-break-inside:auto;padding:16px 18px;margin-bottom:14px}
     h2.section-title,h3.sub-title{break-after:avoid;page-break-after:avoid}
-    .card,.rule,.warn,.flow,.compare .col,table.spec tr,.notes-list li,.check-list li,.desk,.phone,.node{break-inside:avoid;page-break-inside:avoid}
+    .card,.rule,.warn,table.spec tr,.notes-list li,.check-list li,.desk,.phone,.node,.compare li,.flow{break-inside:avoid;page-break-inside:avoid}
+    .compare,.comp-grid{display:block!important}
+    .compare .col{display:block;margin-bottom:10px;break-inside:auto;page-break-inside:auto}
+    .comp-grid .card{display:inline-block;width:calc(50% - 8px);vertical-align:top;margin:0 0 10px;box-sizing:border-box}
+    .comp-grid .card:nth-child(odd){margin-right:12px}
+    .tbl-wrap{overflow:visible}
     .stage{grid-template-columns:1fr 250px!important;gap:16px;zoom:.62;break-inside:avoid}
     .section-sub{break-after:avoid;page-break-after:avoid}
     .phone{margin:0}
     .ages{display:block}
-    .compare{grid-template-columns:1fr 1fr!important}
     .flow .arrow{display:flex!important}
   }
 </style>
