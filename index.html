@@ -175,12 +175,13 @@
           <li>Departure point starts blank and must be chosen</li>
           <li>Added: Port Elizabeth (Gqeberha), East London, Bloemfontein</li>
           <li>Newsletter tick creates a separate marketing subscription, with the interest picked up from the page</li>
-          <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 interest groups, two lists only</li>
-          <li>Anchor link to the sign-up for Tommy and the team</li>
+          <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 themes, two lists only</li>
+          <li>The footer sign-up link shared by Tommy and the team</li>
           <li>Grouped sections, one column on mobile, bigger tap areas</li>
           <li>Hidden fields carry the page link, reference, property name and destination</li>
           <li>A clickable Package Link on every enquiry, so consultants see the full package in one click</li>
           <li>Every enquiry named the same simple way: Hotel or Destination - Surname</li>
+          <li>All newsletter forms on the site brought in line with one standard form</li>
         </ul>
       </div>
     </div>
@@ -311,7 +312,7 @@
     <p style="font-size:11.5px;color:var(--slate)">Surnames are examples only.</p>
     <div class="comp-grid">
       <div class="card"><div class="mini">Combo packages</div><h4>Both properties, shortened</h4><p>Joined with "&amp;" and kept short, e.g. Chobe Princess &amp; Ichingo. The short name is set once when the package is loaded on the site.</p></div>
-      <div class="card"><div class="mini">Chat and WhatsApp</div><h4>Start as General</h4><p>Enquiries created from chats arrive as "General - Surname". Renaming it once the hotel is known becomes part of the consultant's routine. This depends on the webhook for chats and the inbox, which still needs to be quoted and signed off.</p></div>
+      <div class="card"><div class="mini">Chat and WhatsApp</div><h4>Start as General</h4><p>Enquiries created from chats arrive as "General - Surname". Renaming it once the hotel is known becomes part of the consultant's routine.</p></div>
       <div class="card"><div class="mini">Star ratings</div><h4>Left out of the name</h4><p>"4*" and "3* Plus" stay on the package page. The name is just the property.</p></div>
     </div>
   </section>
@@ -331,7 +332,7 @@
       <div class="node"><b>Fresh</b>Contact + Enquiry, and (if ticked) added to the matching list.</div>
     </div>
     <div class="flow">
-      <div class="node"><b>Newsletter sign-up form</b>The expanded sign-up on the site (Kim is getting Synapse to add a home page link to it).</div>
+      <div class="node"><b>Newsletter sign-up form</b>The full sign-up on the site, or the sign-up page linked in the footer.</div>
       <div class="arrow">&rarr;</div>
       <div class="node hl"><b>Zapier</b>No enquiry created. Subscription only, with the page it came from.</div>
       <div class="arrow">&rarr;</div>
@@ -375,14 +376,54 @@
     <p>The expanded sign-up doesn't need this as much, because the customer tells us their interests directly, but we'd still capture the page link so we know where sign-ups come from.</p>
     <div class="rule"><b>Alongside Mailchimp:</b> the expanded sign-up keeps sending to Mailchimp as it does today, and Zapier also sends each sign-up to Fresh.</div>
 
-    <h3 class="sub-title">Anchor link to the sign-up</h3>
-    <p>Kim is asking Synapse for a direct link that jumps straight to the "Sign up to our exclusive travel deals" section. Once we have it, it gets used in three places:</p>
+    <h3 class="sub-title">One newsletter form across the site</h3>
+    <p>There are a few different newsletter sign-up forms on the site today. They should all collect the same details in the same way, so every sign-up arrives in Fresh complete and goes to the right list, whichever page it came from. The full "Sign up to our exclusive travel deals" form becomes the one standard, and every other version is brought in line with it.</p>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>The standard</th><th>Every newsletter form has</th></tr>
+      <tr><td>Heading</td><td>Sign up to our exclusive travel deals</td></tr>
+      <tr><td>Details</td><td>First Name, Last Name, Email, Phone Number (with country code); Email required</td></tr>
+      <tr><td>Region</td><td>"Select region" placeholder, then Gauteng, Free State, Western Cape, KwaZulu Natal, Mpumalanga, Limpopo, North West, Eastern Cape, Northern Cape, Other</td></tr>
+      <tr><td>Travel agent</td><td>Are you a Travel Agent? No / Yes, with No selected</td></tr>
+      <tr><td>Interests</td><td>All 14 interests, same names, same order</td></tr>
+      <tr><td>Consent</td><td>The same privacy line and link to the privacy policy</td></tr>
+      <tr><td>Button</td><td>Subscribe Now</td></tr>
+      <tr><td>Hidden</td><td>Page link and Form source (Newsletter sign-up)</td></tr>
+      <tr><td>Where it sends</td><td>Mailchimp, as today, and Fresh through Zapier</td></tr>
+    </table></div>
+    <h3 class="sub-title">Audit: each form against the standard</h3>
+    <div class="tbl-wrap"><table class="spec">
+      <tr><th>Form</th><th>Where it appears</th><th>Differences from the standard</th><th>Action</th></tr>
+      <tr><td><b>Sign up to our exclusive travel deals</b></td><td>Full sign-up section on the site</td><td>None; this is the standard. Same 14 interests in the same order as the footer page</td><td><span class="pill-tag new">Keep</span> Add hidden fields and the Fresh connection</td></tr>
+      <tr><td><b>Enquiry form tick</b></td><td>Package enquiry form</td><td>One tick box only, by design</td><td><span class="pill-tag change">Keep simple</span> Clearer wording; interest picked up from the page link</td></tr>
+      <tr><td><b>Footer sign-up page</b><br><span style="color:var(--slate);font-size:11px">thompsons.us17.list-manage.com</span></td><td>"Subscribe" link in the site footer, opens a Mailchimp sign-up page</td><td>Heading reads "Sign up now to receive access to our top travel deals!"; "Surname" and "Email Address" instead of Last Name and Email; Region opens on Gauteng instead of a blank choice; travel agent is Yes / No buttons; interests headed "What are you interested in?"; no privacy line; an unlabelled Name, Email and Comment block above the form</td><td><span class="pill-tag change">Align</span> Match the heading, labels and privacy line; Region starts blank; remove the extra block</td></tr>
+      <tr><td><b>"Psst..." pop-up</b><br><span style="color:var(--slate);font-size:11px">"Get Inspired" banner</span></td><td>Pop-up over site pages</td><td>Heading reads "Psst... Sign up for our exclusive subscriber deals"; only First Name and Email; no Last Name, phone, Region, travel agent question or interests; no privacy line. Without the travel agent question, agents can't be kept separate</td><td><span class="pill-tag change">Align</span> Same fields as the standard, set to scroll inside the pop-up on a phone; add the privacy line; keep the "Get Inspired" image</td></tr>
+      <tr><td><b>Blog "Subscribe" section</b></td><td>Bottom of the blog pages (thompsons.co.za/blog)</td><td>Heading reads "Subscribe" with its own intro line; Email Address comes before First Name; no Last Name, phone, Region or interests; travel agent is a Yes / No toggle, the same hard-to-read style as the enquiry form; button reads "Submit"; no privacy line</td><td><span class="pill-tag change">Align</span> Replace with the standard form; the intro line about deals, inspiration and competitions can stay above it</td></tr>
+      <tr><td><b>Any other sign-up versions</b></td><td>Found during the page-by-page review</td><td>Recorded here as they're found</td><td><span class="pill-tag change">Align</span> Replace with the standard form</td></tr>
+    </table></div>
+    <div class="rule"><b>Region starting on Gauteng</b> is the same issue as Self-Drive on the enquiry form: anyone who skips it is recorded as Gauteng, so the Gauteng numbers would look higher than they really are. A blank "Select region" fixes it.</div>
+    <div class="rule"><b>How the review works:</b> I'll go through the site page by page (home, deals, destinations, blog, footer and any pop-ups) and add each sign-up form to the table above with what's different. Synapse then swaps each one for the standard form, ideally a single shared form so any future change only needs to be made once.</div>
+
+    <h3 class="sub-title">One route into Fresh for every newsletter sign-up</h3>
+    <p>The footer link opens a sign-up page hosted by Mailchimp, so those sign-ups go straight to Mailchimp without passing through the website. Rather than connecting each form separately, Zapier picks up every new Mailchimp subscriber and sends them to Fresh. Whichever form someone uses, they arrive in Fresh the same way, with Travel Agent = Yes still going to its own list.</p>
+    <div class="flow">
+      <div class="node"><b>Any newsletter form</b>Site sign-up section or footer sign-up page</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>Mailchimp</b>Subscriber added, as today</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node hl"><b>Zapier</b>New subscriber picked up</div>
+      <div class="arrow">&rarr;</div>
+      <div class="node"><b>Fresh</b>Travel Deals or Travel Agent list, with region and interests</div>
+    </div>
+    <p style="font-size:12.5px;color:var(--slate)">The simple tick on the enquiry form still goes through the enquiry route, since it carries the enquiry details and page link with it.</p>
+
+    <h3 class="sub-title">Sharing the sign-up link</h3>
+    <p>The footer sign-up page is the link to share. It's already live and opens a full sign-up form on its own, which works well on a phone:</p>
+    <div class="card" style="margin-bottom:14px"><p style="color:var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;margin:0;word-break:break-all">https://thompsons.us17.list-manage.com/subscribe?u=df5edbd12b918fe7603c17d11&amp;id=66cb12efa1</p></div>
     <div class="comp-grid">
       <div class="card"><div class="mini">Tommy</div><h4>Fresh bot</h4><p>Added to Tommy's knowledge so when a customer asks about deals, specials or newsletters, Tommy shares the link.</p></div>
       <div class="card"><div class="mini">Team</div><h4>Chat canned response</h4><p>A saved reply in Fresh the consultants can drop in at the end of a chat: "Would you like our latest deals? You can sign up here."</p></div>
       <div class="card"><div class="mini">Everywhere else</div><h4>Signatures and SharePoint</h4><p>Email signature line and a link on the Knowledge Hub Resources page so the team always knows where it is.</p></div>
     </div>
-    <div class="rule"><b>Next step:</b> once Synapse adds the link (the home page address ending in <code>#newsletter</code>), I'll test it on desktop and phone, then add it to Tommy, the canned response and SharePoint.</div>
 
     <h3 class="sub-title">Consent wording (suggested)</h3>
     <div class="card"><p style="color:var(--ink);margin:0">&#9744; <b>Yes, send me travel deals and inspiration from Thompsons For Travel.</b> You can unsubscribe at any time.</p></div>
@@ -397,17 +438,17 @@
       <div class="card list-card"><div class="mini">List 1 &middot; Customers</div><h4>Travel Deals Subscribers</h4><p>Every holiday customer who has opted in, from either form. The one master marketing list, and the one opt-outs are managed against.</p></div>
       <div class="card list-card alt"><div class="mini">List 2 &middot; Travel agents</div><h4>Travel Agent Subscribers</h4><p>Anyone who answered Yes to "Are you a Travel Agent?". Kept separate from customer sign-ups and not included in Thompsons For Travel customer communication.</p></div>
     </div>
-    <p>That's it: two lists. Everything else is done with interest groups and fields, which become saved views in Fresh rather than lists to look after.</p>
+    <p>That's it: two lists. Everything else is done with themes and fields, which become saved views in Fresh rather than lists to look after.</p>
 
-    <h3 class="sub-title">Interest groups: 14 interests grouped into 6</h3>
-    <p>We keep all 14 ticks exactly as the customer chose them, but group them into six interest groups that suit the way Thompsons For Travel sells. A group can be used as a whole when needed, and nobody has to manage 14 audiences.</p>
+    <h3 class="sub-title">Themes: 14 interests grouped into 6</h3>
+    <p>We keep all 14 ticks exactly as the customer chose them, but group them into six themes that suit the way Thompsons For Travel sells. A theme can be used as a group when needed, and nobody has to manage 14 audiences.</p>
     <div class="comp-grid">
-      <div class="card"><div class="mini">Group 1</div><h4>Beach &amp; Islands</h4><p>Beach Destinations, All Inclusive Holidays</p></div>
-      <div class="card"><div class="mini">Group 2</div><h4>Family Time</h4><p>Family Holidays, School Holiday Breaks (plus anyone who enquired with children)</p></div>
-      <div class="card"><div class="mini">Group 3</div><h4>Local is Lekker</h4><p>Local is Lekker (plus enquiries from local pages)</p></div>
-      <div class="card"><div class="mini">Group 4</div><h4>Safari &amp; Adventure</h4><p>Bush Getaways, Adventure, Sports Travel</p></div>
-      <div class="card"><div class="mini">Group 5</div><h4>Romance &amp; Luxury</h4><p>Romantic Getaways, Luxury Holidays</p></div>
-      <div class="card"><div class="mini">Group 6</div><h4>Journeys &amp; Cities</h4><p>City Breaks, Cruising, Rail Trips, Solo Travel</p></div>
+      <div class="card"><div class="mini">Theme 1</div><h4>Beach &amp; Islands</h4><p>Beach Destinations, All Inclusive Holidays</p></div>
+      <div class="card"><div class="mini">Theme 2</div><h4>Family Time</h4><p>Family Holidays, School Holiday Breaks (plus anyone who enquired with children)</p></div>
+      <div class="card"><div class="mini">Theme 3</div><h4>Local is Lekker</h4><p>Local is Lekker (plus enquiries from local pages)</p></div>
+      <div class="card"><div class="mini">Theme 4</div><h4>Safari &amp; Adventure</h4><p>Bush Getaways, Adventure, Sports Travel</p></div>
+      <div class="card"><div class="mini">Theme 5</div><h4>Romance &amp; Luxury</h4><p>Romantic Getaways, Luxury Holidays</p></div>
+      <div class="card"><div class="mini">Theme 6</div><h4>Journeys &amp; Cities</h4><p>City Breaks, Cruising, Rail Trips, Solo Travel</p></div>
     </div>
     <div class="rule">These six are a starting suggestion. They can be renamed or regrouped easily later, because the original 14 ticks are still stored on each contact.</div>
 
@@ -415,8 +456,8 @@
     <div class="tbl-wrap"><table class="spec">
       <tr><th>Field</th><th>Values</th><th>Filled by</th></tr>
       <tr><td>Interests</td><td>The 14 tick boxes, as chosen</td><td>Expanded sign-up</td></tr>
-      <tr><td>Interest Groups</td><td>The 6 interest groups above</td><td>Zapier, from the ticks</td></tr>
-      <tr><td>Region</td><td>Same options as the sign-up dropdown</td><td>Expanded sign-up</td></tr>
+      <tr><td>Interest Themes</td><td>The 6 themes above</td><td>Zapier, from the ticks</td></tr>
+      <tr><td>Region</td><td>Gauteng, Free State, Western Cape, KwaZulu Natal, Mpumalanga, Limpopo, North West, Eastern Cape, Northern Cape, Other</td><td>Expanded sign-up</td></tr>
       <tr><td>Travel Agent</td><td>Yes / No</td><td>Expanded sign-up</td></tr>
       <tr><td>Travel Interest</td><td>Local / International / Not set</td><td>Page link</td></tr>
       <tr><td>Destination Interest</td><td>Matches the destination group list we already planned (Africa, Dubai, Far East, Indian Ocean Islands, Worldwide), plus Local</td><td>Page link, or consultant</td></tr>
@@ -452,7 +493,7 @@
       <tr><td>First / Last Name, Email, Phone</td><td>Contact</td><td>Standard fields (phone joined with +27)</td><td>Standard</td></tr>
       <tr><td>Region</td><td>Contact</td><td>Region</td><td>Dropdown (matches form)</td></tr>
       <tr><td>Are you a Travel Agent?</td><td>Contact</td><td>Travel Agent, decides which list</td><td>Yes / No</td></tr>
-      <tr><td>Interests (14)</td><td>Contact</td><td>Interests + Interest Groups</td><td>Multi-select</td></tr>
+      <tr><td>Interests (14)</td><td>Contact</td><td>Interests + Interest Themes</td><td>Multi-select</td></tr>
     </table></div>
     <h3 class="sub-title">Package link on every enquiry</h3>
     <p>The consultant should never have to search the website to see what the customer was looking at. The package link arrives two ways:</p>
@@ -484,10 +525,11 @@
       <li>Run through the new layout, children's ages and the departure list</li>
       <li>Enquiry naming: Hotel or Destination - Surname, with property name and destination sent as hidden fields</li>
       <li>Newsletter tick wording, with a quick check with Chantelle as POPIA officer</li>
-      <li>Travel Agent = Yes routing to its own list, and the six interest groups</li>
-      <li>The #newsletter anchor link from Synapse</li>
+      <li>Travel Agent = Yes routing to its own list, and the six interest themes</li>
+      <li>Footer sign-up page: heading, labels, privacy line and a blank Region to match the standard</li>
       <li>Which other pages use the same form, so the changes carry across</li>
-      <li>When Synapse can schedule the changes. We need them live by the week of 9 November, so the data can be checked in Fresh during the CRM build.</li>
+      <li>Newsletter forms: bring every version on the site in line with the one standard form</li>
+      <li>When Synapse can schedule the changes</li>
       <li>Testing before go-live: an enquiry with children, an enquiry with the newsletter ticked, a newsletter sign-up, and a travel agent sign-up, each checked in Fresh</li>
     </ul>
   </section>
