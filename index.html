@@ -119,7 +119,22 @@
     .print-btn{position:static;margin:12px 16px 0}
     .head-titles h1{font-size:22px}
   }
-  @media print{.print-btn,.toc-bar{display:none}body{background:#fff}section.block{box-shadow:none;break-inside:avoid;page-break-inside:avoid}.ages{display:block}}
+  @page{size:A4;margin:12mm 10mm}
+  @media print{
+    *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+    body{background:#fff;padding:0;font-size:12px}
+    .print-btn,.toc-bar{display:none!important}
+    .head-inner{padding:6px 0 4px}.wave{height:18px}.wrap{padding:0;max-width:none}
+    section.block{box-shadow:none;break-inside:auto;page-break-inside:auto;padding:16px 18px;margin-bottom:14px}
+    h2.section-title,h3.sub-title{break-after:avoid;page-break-after:avoid}
+    .card,.rule,.warn,.flow,.compare .col,table.spec tr,.notes-list li,.check-list li,.desk,.phone,.node{break-inside:avoid;page-break-inside:avoid}
+    .stage{grid-template-columns:1fr 250px!important;gap:16px;zoom:.62;break-inside:avoid}
+    .section-sub{break-after:avoid;page-break-after:avoid}
+    .phone{margin:0}
+    .ages{display:block}
+    .compare{grid-template-columns:1fr 1fr!important}
+    .flow .arrow{display:flex!important}
+  }
 </style>
 </head>
 <body>
@@ -162,6 +177,7 @@
         <ul>
           <li>Children's ages typed into one small free-text box</li>
           <li>Departure point already shows "Self-Drive", so it's easy to send without choosing</li>
+          <li>Start and end date calendars work separately: pick a November start and the end date calendar still opens on October</li>
           <li>Departure options limited to Johannesburg, Cape Town, Durban, Self-Drive and Other</li>
           <li>One "Sign up for more travel deals" tick that isn't a real subscription in Fresh</li>
           <li>Fields sit in a three-across grid that gets cramped on a phone</li>
@@ -173,6 +189,7 @@
         <ul>
           <li>Pick the number of children, and an age box opens for each child</li>
           <li>Departure point starts blank and must be chosen</li>
+          <li>The end date calendar opens on the same month as the start date</li>
           <li>Added: Port Elizabeth (Gqeberha), East London, Bloemfontein</li>
           <li>Newsletter tick creates a separate marketing subscription, with the interest picked up from the page</li>
           <li>Expanded sign-up flows to Fresh too: travel agents kept apart, 14 interests grouped into 6 themes, two lists only</li>
@@ -206,7 +223,7 @@
       <li><span class="tagdot">1</span><span><b>Grouped sections.</b> Three light headings (About you, Your trip, Who's travelling) break the form into easy chunks. Same orange Send button and same look as the site today.</span></li>
       <li><span class="tagdot">2</span><span><b>Contact preference as two buttons.</b> Phone or Email side by side replaces the small toggle, which is hard to read on a phone and not clear about which way is "on".</span></li>
       <li><span class="tagdot">3</span><span><b>Departure point starts blank</b> with "Select departure point" and must be chosen before sending.</span></li>
-      <li><span class="tagdot">4</span><span><b>End date follows the start date.</b> When a start date is picked, the end date calendar opens on that month and can't be set earlier than the start.</span></li>
+      <li><span class="tagdot">4</span><span><b>End date follows the start date.</b> Pick a start date in November and the end date calendar opens on November too, not on the current month. The end date also can't be set earlier than the start.</span></li>
       <li><span class="tagdot">5</span><span><b>Children's ages open per child.</b> Choose 2 children and two age boxes appear. Choose 0 and nothing shows.</span></li>
       <li><span class="tagdot">6</span><span><b>Newsletter tick with clearer wording</b> so the customer knows what they're agreeing to, kept unticked by default.</span></li>
     </ul>
@@ -224,7 +241,7 @@
       <tr><td><b>Code + Phone number</b></td><td><span class="pill-tag change">Change</span></td><td>Stay as two boxes for the customer; joined into one number (e.g. +27821234567) before it reaches Fresh. Number keypad on mobile.</td><td>WhatsApp needs the +27 included. We've already seen messages fail without it.</td></tr>
       <tr><td><b>Prefer to be contacted by</b></td><td><span class="pill-tag change">Change</span></td><td>Two buttons (Phone / Email) instead of the toggle. Still compulsory.</td><td>Clearer on mobile; feeds a Fresh field so follow-ups can respect it.</td></tr>
       <tr><td><b>Departure point</b></td><td><span class="pill-tag change">Change</span></td><td>Blank by default, compulsory, new hubs added. See section 5.</td><td>Today it defaults to Self-Drive, so we can't tell a real choice from a skipped one.</td></tr>
-      <tr><td><b>Start date / End date</b></td><td><span class="pill-tag change">Change</span></td><td>No pre-filled dates. End date opens on the start date's month and can't be earlier.</td><td>Pre-filled dates get sent unchanged and look like real travel dates.</td></tr>
+      <tr><td><b>Start date / End date</b></td><td><span class="pill-tag change">Change</span></td><td>No pre-filled dates. The end date calendar opens on the start date's month (start in November, end opens on November) and can't be earlier than the start.</td><td>Pre-filled dates get sent unchanged and look like real travel dates.</td></tr>
       <tr><td><b>My dates are flexible</b></td><td><span class="pill-tag">No change</span></td><td>Passed through to Fresh as a Yes/No.</td><td>Helps the consultant offer better value dates.</td></tr>
       <tr><td><b>Adults</b></td><td><span class="pill-tag change">Change</span></td><td>Dropdown 1 to 10 (default blank), compulsory.</td><td>Stops typing errors and blank enquiries.</td></tr>
       <tr><td><b>Children</b></td><td><span class="pill-tag change">Change</span></td><td>Dropdown 0 to 6 (default 0).</td><td>Drives the age boxes below it.</td></tr>
@@ -236,6 +253,11 @@
       <tr><td><b>Destination</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>Destination from the package details on the site (e.g. Mauritius).</td><td>Enquiry name fallback, destination reporting and newsletter interest.</td></tr>
       <tr><td><b>Form source</b></td><td><span class="pill-tag hidden">Hidden</span></td><td>"Package enquiry" or "Newsletter sign-up".</td><td>So Fresh knows which form a record came from.</td></tr>
     </table></div>
+    <h3 class="sub-title">The two dates working together</h3>
+    <div class="compare">
+      <div class="col before"><h4>Today</h4><ul><li>Customer picks a start date of 14 November</li><li>Opens the end date calendar: it shows October</li><li>Has to click forward a month to find November again</li></ul></div>
+      <div class="col after"><h4>Proposed</h4><ul><li>Customer picks a start date of 14 November</li><li>Opens the end date calendar: it shows November, with 14 November marked</li><li>Dates before 14 November can't be chosen</li></ul></div>
+    </div>
   </section>
 
   <!-- 4 -->
